@@ -1,0 +1,37 @@
+# Register A User
+mutation Register {
+  register(
+    userCredentials: {
+      username: "Sia"
+      email: "sia@gmail.com"
+      password: "123123"
+      confirmPassword: "123123"
+    }
+  ) {
+    id
+    token
+    email
+    token
+    username
+    createdAt
+    updatedAt
+  }
+}
+
+# Login A User
+mutation Login {
+  login(
+    userCredentials: {
+      username: "Sia"
+      email: "sia@gmail.com"
+      password: "123123"
+    }
+  ) {
+    id
+    token
+    email
+    token
+    username
+    createdAt
+  }
+}

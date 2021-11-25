@@ -1,0 +1,42 @@
+# Get Posts
+query GetPosts {
+  getPosts {
+    id
+    post
+    user {
+      username
+      id
+    }
+  }
+}
+
+# Create A New Post
+mutation CreatePost {
+  createPost(payload: { body: "Post Test Two Moon" }) {
+    user {
+      email
+      id
+    }
+    post
+    createdAt
+    updatedAt
+  }
+}
+
+# Update A New Post
+mutation UpdatePost {
+  updatePost(
+    payload: { postId: "6198e0e7c51b933318e671fe", body: "Post Test Two Moon" }
+  ) {
+    id
+    post
+    user {
+      username
+    }
+  }
+}
+
+# Delete A Post
+mutation DeletePost {
+  deletePost(payload: { postId: "61881c85ee95f6a91e2dd37a" })
+}
